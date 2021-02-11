@@ -30,13 +30,13 @@ User.create!(
   password: '123456'
 )
 
-puts "Creating benchmark pics..."
-5.times do
-  Position.create!(
-    user: User.sample,
-    description: internship_description.sample,
-    title: internship_title.sample,
-    salary: "#{rand(800..1000)} Yen",
-    duration: "#{rand(1..12)} months"
-  )
-end
+# puts "Creating benchmark pics..."
+# 5.times do
+#   Position.create!(
+#     user: User.sample,
+#     description: internship_description.sample,
+#     title: internship_title.sample,
+#     salary: "#{rand(800..1000)} Yen",
+#     duration: "#{rand(1..12)} months"
+#   )
+# end
