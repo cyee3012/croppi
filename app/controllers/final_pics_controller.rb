@@ -10,13 +10,13 @@ class FinalPicsController < ApplicationController
   end
 
   def new
-    @final_pic = current_user.final_pics.new
+    @final_pic = FinalPic.new
     @benchmark_pic = BenchmarkPic.find(params[:benchmark_pic_id])
     authorize @final_pic
   end
 
   def create
-    @final_pic = current_user.final_pics.new(final_pic_params) #FinalPic.new(final_pic_params)
+    @final_pic = FinalPic.new(final_pic_params) #FinalPic.new(final_pic_params)
     authorize @final_pic
     @final_pic.save
     redirect_to final_pic_path(@final_pic)
