@@ -9,6 +9,7 @@ class FinalPicsController < ApplicationController
 
   def new
     @final_pic = FinalPic.new
+    @benchmark_pic = FinalPic.find(params[:benchmark_pic_id])
   end
 
   def create
