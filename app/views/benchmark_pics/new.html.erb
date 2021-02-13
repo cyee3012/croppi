@@ -3,9 +3,4 @@
   <input type="file" id="imageFile" capture="user" accept="image/*;capture=camera">
 </p>
  -->
-<%= simple_form_for(@benchmark_pic) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photo, as: :file, input_html: { multiple: true } %>
-  <%= f.button :submit %>
-  <!-- [...] -->
-<% end %>
+<%= render 'form', benchmark_pic: @benchmark_pic %>
