@@ -16,9 +16,13 @@ class BenchmarkPicsController < ApplicationController
 
   def create
     @benchmark_pic = current_user.benchmark_pics.new(benchmark_pic_params) #BenchmarkPic.new(benchmark_pic_params)
+    @benchmark_pic.user = current_user
     authorize @benchmark_pic
-    @benchmark_pic.save
-    redirect_to new_final_pic_path
+    if @benchmark_pic.save
+      redirect_to new_benchmark_pic_final_pic_path(@benchmark_pic)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -45,6 +49,6 @@ class BenchmarkPicsController < ApplicationController
   end
 
   def benchmark_pic_params
-    params.require(:benchmark_pic).permit(:user_id)
+    params.require(:benchmark_pic).permit(:user_id, :photo)
   end
 end

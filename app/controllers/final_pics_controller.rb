@@ -11,6 +11,7 @@ class FinalPicsController < ApplicationController
 
   def new
     @final_pic = current_user.final_pics.new
+    @benchmark_pic = FinalPic.find(params[:benchmark_pic_id])
     authorize @final_pic
   end
 
