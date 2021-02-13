@@ -36,6 +36,6 @@ class BenchmarkPicsController < ApplicationController
   private
 
   def benchmark_pic_params
-    params.require(:benchmark_pic).permit(:user_id)
+    params.require(:benchmark_pic).permit(:user_id, :photo)
   end
 end
