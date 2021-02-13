@@ -18,14 +18,14 @@ User.create!(
 
 puts "Creating demo user/Mayu"
 User.create!(
-  name: "Chii Law",
+  name: "Mayu Miyoshi",
   email: "mayu.miyoshi1313@gmail.com",
   password: '123456'
 )
 
 puts "Creating demo user/Albin"
 User.create!(
-  name: "Chii Law",
+  name: "Albin Ngawing",
   email: "fabianalbin7@gmail.com",
   password: '123456'
 )
