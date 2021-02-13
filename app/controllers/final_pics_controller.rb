@@ -1,6 +1,8 @@
 class FinalPicsController < ApplicationController
+  before_action :set_final_pics, only: [:show, :edit, :update, :destroy]
+
   def index
-    @final_pics = FinalPic.all
+    @final_pics = policy_scope(FinalPic)
   end
 
   def show
@@ -8,12 +10,14 @@ class FinalPicsController < ApplicationController
   end
 
   def new
-    @final_pic = FinalPic.new
+    @final_pic = current_user.final_pics.new
     @benchmark_pic = FinalPic.find(params[:benchmark_pic_id])
+    authorize @final_pic
   end
 
   def create
-    @final_pic = FinalPic.new(final_pic_params)
+    @final_pic = current_user.final_pics.new(final_pic_params) #FinalPic.new(final_pic_params)
+    authorize @final_pic
     @final_pic.save
     redirect_to final_pic_path(@final_pic)
   end
@@ -35,6 +39,11 @@ class FinalPicsController < ApplicationController
   end
 
   private
+  # same as benchmark pics I added this one for callback
+  def set_final_pics
+    @final_pic = FinalPic.find(params[:id])
+    authorize @final_pic
+  end
 
   def final_pic_params
     params.require(:final_pic).permit(:benchmark_pic_id)
