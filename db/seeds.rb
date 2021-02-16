@@ -40,3 +40,28 @@ User.create!(
 #     duration: "#{rand(1..12)} months"
 #   )
 # end
+
+
+# seed a random picture
+puts "Create a benchmark pic"
+BenchmarkPic.create!(
+  user: User.where(email:"fabianalbin7@gmail.com").first
+
+  )
+
+puts "Creating final picture"
+user = User.where(email:"fabianalbin7@gmail.com").first
+final_pic = FinalPic.create!(
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://wallpapercave.com/wp/wp4312137.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+
+
+
+
+
