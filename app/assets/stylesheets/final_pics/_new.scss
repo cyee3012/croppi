@@ -1,0 +1,17 @@
+.photo-container {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  border: 2px solid black;
+}
+
+.final_pic, .benchmark_pic {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.benchmark_pic {
+  filter: opacity(0.5);
+}
