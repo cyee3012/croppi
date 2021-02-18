@@ -11,8 +11,6 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
-
 @import "social-share-button";
 
 $size: 48px;
@@ -24,7 +22,6 @@ $size: 48px;
     width: $size;
     padding: auto;
     margin: auto;
-
   }
-
 }
+@import "final_pics/new"
