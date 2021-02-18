@@ -14,7 +14,6 @@
 @import "social-share-button";
 
 $size: 48px;
-
 .social-share-button {
   .ssb-icon {
     background-size: $size $size;
@@ -24,4 +23,5 @@ $size: 48px;
     margin: auto;
   }
 }
-@import "final_pics/new"
+@import "final_pics/new";
+@import "components/banner";
