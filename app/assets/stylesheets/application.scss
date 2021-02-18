@@ -11,5 +11,17 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "social-share-button";
+
+$size: 48px;
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+    padding: auto;
+    margin: auto;
+  }
+}
 @import "final_pics/new";
 @import "components/banner";
