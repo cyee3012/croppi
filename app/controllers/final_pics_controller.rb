@@ -17,6 +17,8 @@ class FinalPicsController < ApplicationController
 
   def create
     @final_pic = FinalPic.new(final_pic_params) #FinalPic.new(final_pic_params)
+    @final_pic.user = current_user
+    @final_pic.benchmark_pic = BenchmarkPic.find(params[:benchmark_pic_id])
     authorize @final_pic
     @final_pic.save
     redirect_to final_pic_path(@final_pic)
@@ -46,6 +48,6 @@ class FinalPicsController < ApplicationController
   end
 
   def final_pic_params
-    params.require(:final_pic).permit(:benchmark_pic_id)
+    params.require(:final_pic).permit(:benchmark_pic_id, :photo)
   end
 end
