@@ -23,6 +23,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import { initSelfie } from './components/final_pic';
+import { previewBenchmark } from './components/benchmark_pic';
 
 
 // Internal imports, e.g:
@@ -31,8 +32,9 @@ import { initSelfie } from './components/final_pic';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  previewBenchmark();
+
   if (document.querySelector('.selfie-video')) {
     initSelfie();
   }
 });
-
