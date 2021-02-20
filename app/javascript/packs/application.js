@@ -34,7 +34,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // previewBenchmark();
 if (document.querySelector('.benchmark_pic_photo')) {
-    reviewBenchmark();
+    previewBenchmark();
   };
   if (document.querySelector('.selfie-video')) {
     initSelfie();
