@@ -10,7 +10,7 @@ class LocationPolicy < ApplicationPolicy
   end
 
   def show?
-    true #anyone should be able to view the final pic?
+    true
   end
 
   def create?
