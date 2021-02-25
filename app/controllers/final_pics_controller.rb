@@ -26,6 +26,10 @@ class FinalPicsController < ApplicationController
 
   def edit
     @final_pic = FinalPic.find(params[:id])
+    @final_pic.user = current_user
+    @benchmark_pic = @final_pic.benchmark_pic
+    authorize @final_pic
+    authorize @benchmark_pic
   end
 
   def update
