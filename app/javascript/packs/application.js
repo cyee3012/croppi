@@ -21,6 +21,7 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+import './social-share-button.js.erb';
 import "bootstrap";
 import { initSelfie } from './components/final_pic';
 import { previewBenchmark } from './components/benchmark_pic';

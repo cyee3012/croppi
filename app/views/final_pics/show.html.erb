@@ -1,8 +1,8 @@
 
-<div class='container'>
-<%= cl_image_tag @final_pic.photo.key, height: 700, width: 340, crop: :fill %>
+<div class='final_pic-container text-center'>
+<%= cl_image_tag @final_pic.photo.key %>
+  <div class='pad'>
+    <%= social_share_button_tag('share') %>
+  </div>
 </div>
 
-<div class='pad'>
-<%= social_share_button_tag('share') %>
-</div>
