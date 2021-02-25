@@ -1,16 +1,14 @@
-.container {
-  display: flex;
+.benchmark-container {
   justify-content: center;
 }
 
 .simple_form {
   text-align: center;
   background-color: #FEF8EC;
-  margin: 20px 10px;
+  margin: 10px 10px;
   padding: 20px;
   border-radius: 2px;
-  border-color: black;
-
+  box-shadow: 0px 0px 5px #E3E3DE;
 }
 
 .form-actions {
@@ -18,18 +16,20 @@
 }
 
 .btn {
-    border-radius: 5px;
-    background-color: #F8C963;
-    border-color: black;
-    color: black;
-  }
+  border-radius: 5px;
+  background-color: #F8C963;
+  border-color: #F8C963;
+  box-shadow: 0px 0px 5px #D9D9D3;
+  color: #F6F6F4;
+}
 
 .btn:hover {
-    border-radius: 5px;
-    background-color: #F8C963;
-    border-color: black;
-    color: black;
-  }
+ border-radius: 5px;
+  background-color: #F8C963;
+  border-color: #F8C963;
+  box-shadow: 0px 0px 5px #D9D9D3;
+  color: #F6F6F4;
+}
 
 label {
   display: none;
@@ -44,14 +44,16 @@ input[type="file"] {
     display: inline-block;
     padding: 10px;
     cursor: pointer;
-    background-image: url("camera.png");
+    background-image: url("https://www.flaticon.com/svg/vstatic/svg/685/685655.svg?token=exp=1613802990~hmac=b9b2a6d6ed466ebd87b6d7d4eeee9fcf");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50px;
+    background-size: 40px;
 }
 
 .benchmark_preview {
-  width: 90%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px #E3E3DE;
 }
