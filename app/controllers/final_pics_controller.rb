@@ -34,6 +34,7 @@ class FinalPicsController < ApplicationController
 
   def update
     @final_pic = FinalPic.find(params[:id])
+    @benchmark_pic = @final_pic.benchmark_pic
     @final_pic.update(final_pic_params)
     redirect_to final_pic_path(@final_pic)
   end
