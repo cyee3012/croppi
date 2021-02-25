@@ -25,6 +25,7 @@ const initSelfie = () => {
       startbutton.innerText = "✅";
       video.pause();
       // Send the selfie to Rails backend to store it
+
       Rails.ajax({
         url: window.location.pathname.replace("/new", ""),
         type: "post",

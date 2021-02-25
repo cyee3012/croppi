@@ -48,6 +48,6 @@ class FinalPicsController < ApplicationController
   end
 
   def final_pic_params
-    params.require(:final_pic).permit(:benchmark_pic_id, :photo)
+    params.require(:final_pic).permit(:benchmark_pic_id, :photo, :id)
   end
 end
