@@ -28,7 +28,6 @@
     color: white;
     opacity: 0.9;
     text-decoration: none;
-    background-color: #F8C963;
     border-color: #F8C963;
   }
 
@@ -40,7 +39,22 @@
    margin-left: auto;
    display: flex;
    justify-content: center;
-   padding-top: 10px;
+   padding-top: 0px;
+  }
+
+  .social-share-button .ssb-twitter {
+      background-image: url("twitter.svg");
+      background-size: 35px;
+  }
+
+  .social-share-button .ssb-facebook {
+      background-image: url("facebook.svg");
+      background-size: 35px;
+  }
+
+  .social-share-button .ssb-tumblr {
+      background-image: url("tumblr.svg");
+      background-size: 35px;
   }
 }
 
