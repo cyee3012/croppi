@@ -26,10 +26,15 @@ class FinalPicsController < ApplicationController
 
   def edit
     @final_pic = FinalPic.find(params[:id])
+    @final_pic.user = current_user
+    @benchmark_pic = @final_pic.benchmark_pic
+    authorize @final_pic
+    authorize @benchmark_pic
   end
 
   def update
     @final_pic = FinalPic.find(params[:id])
+    @benchmark_pic = @final_pic.benchmark_pic
     @final_pic.update(final_pic_params)
     redirect_to final_pic_path(@final_pic)
   end
@@ -48,6 +53,6 @@ class FinalPicsController < ApplicationController
   end
 
   def final_pic_params
-    params.require(:final_pic).permit(:benchmark_pic_id, :photo)
+    params.require(:final_pic).permit(:benchmark_pic_id, :photo, :id)
   end
 end

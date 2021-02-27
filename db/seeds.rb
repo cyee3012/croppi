@@ -65,7 +65,11 @@ photo = open("https://wallpapercave.com/wp/wp4312137.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
 
-
+puts "Creating demo address"
+Location.create!(
+  latitude: 48.8582,
+  longitude: 2.2945
+)
 
 
 
