@@ -19,6 +19,7 @@ class FinalPicsController < ApplicationController
     @final_pic = FinalPic.new(final_pic_params) #FinalPic.new(final_pic_params)
     @final_pic.user = current_user
     @final_pic.benchmark_pic = BenchmarkPic.find(params[:benchmark_pic_id])
+    @final_pic.location = Location.second
     authorize @final_pic
     @final_pic.save
     redirect_to final_pic_path(@final_pic)
