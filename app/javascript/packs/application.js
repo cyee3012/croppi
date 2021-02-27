@@ -25,6 +25,7 @@ import './social-share-button.js.erb';
 import "bootstrap";
 import { initSelfie } from './components/final_pic';
 import { previewBenchmark } from './components/benchmark_pic';
+import { initMapbox } from '../plugins/init_mapbox';
 
 
 // Internal imports, e.g:
@@ -40,4 +41,9 @@ if (document.querySelector('.benchmark_pic_photo')) {
   if (document.querySelector('.selfie-video')) {
     initSelfie();
   }
+});
+
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
 });

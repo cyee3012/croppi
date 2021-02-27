@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :final_pics, only: [:new, :create]
   end
   resources :final_pics, only: [:show, :edit, :update]
+  resources :locations, only: :index
 end
