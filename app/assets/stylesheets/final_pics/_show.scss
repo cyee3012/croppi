@@ -56,6 +56,17 @@
       background-image: url("tumblr.svg");
       background-size: 35px;
   }
+
+  .home_link {
+    margin-top: -10px;
+
+    a:hover, a:visited, a:link, a:active {
+      color: black;
+      opacity: 0.5;
+      text-decoration: underline;
+      font-size: 10px;
+    }
+  }
 }
 
 
