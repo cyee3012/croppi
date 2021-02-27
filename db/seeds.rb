@@ -9,6 +9,7 @@ FinalPic.destroy_all
 Location.destroy_all
 BenchmarkPic.destroy_all
 User.destroy_all
+Location.destroy_all
 
 puts "Creating demo user/Chii"
 User.create!(
@@ -71,6 +72,7 @@ lewagon = Location.create!(
   latitude: 35.6340257,
   longitude: 139.7091676
 )
+
 final_pic = FinalPic.create!(
   location: lewagon,
   user: user,

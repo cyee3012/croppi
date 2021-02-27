@@ -11,15 +11,17 @@ class BenchmarkPicsController < ApplicationController
 
   def new
     @benchmark_pic = current_user.benchmark_pics.new
+    @location = Location.find(params[:location_id])
     authorize @benchmark_pic
   end
 
   def create
     @benchmark_pic = current_user.benchmark_pics.new(benchmark_pic_params) #BenchmarkPic.new(benchmark_pic_params)
     @benchmark_pic.user = current_user
+    @benchmark_pic.location_id = params[:location_id]
     authorize @benchmark_pic
     if @benchmark_pic.save
-      redirect_to new_benchmark_pic_final_pic_path(@benchmark_pic)
+      redirect_to new_location_benchmark_pic_final_pic_path(params[:location_id], @benchmark_pic)
     else
       render :new
     end
@@ -32,7 +34,7 @@ class BenchmarkPicsController < ApplicationController
   def update
     @benchmark_pic = BenchmarkPic.find(params[:id])
     @benchmark_pic.update(benchmark_pic_params)
-    redirect_to new_final_pic_path
+    redirect_to new_location_benchmark_pic_final_pic_path
   end
 
   def destroy
@@ -50,6 +52,6 @@ class BenchmarkPicsController < ApplicationController
 
   def benchmark_pic_params
     #params.require(:benchmark_pic).permit(:user_id, :photo)
-    params.require(:benchmark_pic).permit(:photo)
+    params.require(:benchmark_pic).permit(:photo, :location_id)
   end
 end

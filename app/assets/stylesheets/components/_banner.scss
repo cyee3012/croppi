@@ -20,8 +20,16 @@
     color: white;
     opacity: 0.9;
     text-decoration: none;
-    background-color: #F8C963;
     border-color: #F8C963;
+  }
+
+  .map_link {
+    padding-left: 40px;
+    a:hover, a:visited, a:link, a:active {
+      font-size: 10px;
+      opacity: 0.8;
+      text-decoration: underline;
+    }
   }
 }
 
