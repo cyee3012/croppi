@@ -13,6 +13,7 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @location = Location.find(params[:id])
   end
 
   def new
@@ -33,8 +34,8 @@ class LocationsController < ApplicationController
   private
 
   def set_locations
-    @Location = Location.find(params[:id])
-    authorize @Location
+    @location = Location.find(params[:id])
+    authorize @location
   end
 
   def location_params

@@ -46,12 +46,17 @@ User.create!(
 puts "Create a benchmark pic"
 BenchmarkPic.create!(
   user: User.where(email:"fabianalbin7@gmail.com").first
+  )
 
+puts "creating location"
+location = Location.create!(
+  address: "Tokyo Station, Tokyo"
   )
 
 puts "Creating final picture"
 user = User.where(email:"fabianalbin7@gmail.com").first
 final_pic = FinalPic.create!(
+  location_id: location.id,
   user: user,
   benchmark_pic: BenchmarkPic.where(user: user).first
   )
