@@ -1,13 +1,19 @@
 class LocationsController < ApplicationController
   before_action :set_locations, only: [:show, :edit, :update, :destroy]
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
 
   def index
     @locations = policy_scope(Location)
+    @locations = Location.all
+    @markers = @locations.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show
+    @location = Location.find(params[:id])
   end
 
   def new
@@ -28,8 +34,8 @@ class LocationsController < ApplicationController
   private
 
   def set_locations
-    @Location = Location.find(params[:id])
-    authorize @Location
+    @location = Location.find(params[:id])
+    authorize @location
   end
 
   def location_params

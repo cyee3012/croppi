@@ -5,7 +5,7 @@ class LocationPolicy < ApplicationPolicy
     end
   end
 
-   def new?
+  def new?
     true
   end
 

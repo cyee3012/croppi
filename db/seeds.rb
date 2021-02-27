@@ -46,12 +46,17 @@ User.create!(
 puts "Create a benchmark pic"
 BenchmarkPic.create!(
   user: User.where(email:"fabianalbin7@gmail.com").first
+  )
 
+puts "creating location"
+location = Location.create!(
+  address: "Tokyo Station, Tokyo"
   )
 
 puts "Creating final picture"
 user = User.where(email:"fabianalbin7@gmail.com").first
 final_pic = FinalPic.create!(
+  location_id: location.id,
   user: user,
   benchmark_pic: BenchmarkPic.where(user: user).first
   )
@@ -60,7 +65,11 @@ photo = open("https://wallpapercave.com/wp/wp4312137.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
 
-
+puts "Creating demo address"
+Location.create!(
+  latitude: 48.8582,
+  longitude: 2.2945
+)
 
 
 
