@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 FinalPic.destroy_all
+Location.destroy_all
 BenchmarkPic.destroy_all
 User.destroy_all
 Location.destroy_all
@@ -66,12 +67,41 @@ photo = open("https://wallpapercave.com/wp/wp4312137.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
 
-puts "Creating demo address-Le wagon"
-Location.create!(
+puts "Creating demo address_Le wagon"
+lewagon = Location.create!(
   latitude: 35.6340257,
   longitude: 139.7091676
 )
 
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614404740/Image_from_iOS_1_ewf9k3.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614404740/Image_from_iOS_2_og9f6c.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614404740/Image_from_iOS_vgrbi2.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
 
 
 
