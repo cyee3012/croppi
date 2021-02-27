@@ -1,5 +1,5 @@
 
-<%= simple_form_for(@benchmark_pic) do |f| %>
+<%= simple_form_for [@location, @benchmark_pic] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -10,6 +10,10 @@
 
   <div class="form-actions">
     <%= f.button :submit, 'use benchmark pic', :class => 'btn btn-primary' %>
+  </div>
+
+  <div class="home_link">
+    <%= link_to "home", root_path %>
   </div>
 <% end %>
 

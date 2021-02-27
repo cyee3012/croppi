@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_121114) do
+ActiveRecord::Schema.define(version: 2021_02_27_033735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2021_02_25_121114) do
     t.text "json_overlay"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "location_id"
+    t.index ["location_id"], name: "index_benchmark_pics_on_location_id"
   end
 
   create_table "final_pics", force: :cascade do |t|
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_121114) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "benchmark_pics", "locations"
   add_foreign_key "final_pics", "benchmark_pics"
   add_foreign_key "final_pics", "users"
 end

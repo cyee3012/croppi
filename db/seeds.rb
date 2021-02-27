@@ -8,6 +8,7 @@
 FinalPic.destroy_all
 BenchmarkPic.destroy_all
 User.destroy_all
+Location.destroy_all
 
 puts "Creating demo user/Chii"
 User.create!(
@@ -65,10 +66,10 @@ photo = open("https://wallpapercave.com/wp/wp4312137.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
 
-puts "Creating demo address"
+puts "Creating demo address-Le wagon"
 Location.create!(
-  latitude: 48.8582,
-  longitude: 2.2945
+  latitude: 35.6340257,
+  longitude: 139.7091676
 )
 
 
