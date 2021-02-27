@@ -4,11 +4,15 @@ class LocationsController < ApplicationController
   def index
     @locations = policy_scope(Location)
     @locations = Location.all
-    @markers = @locations.geocoded.map do |flat|
+    @markers = @locations.geocoded.map do |location|
+      # if the location has pic
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: location.latitude,
+        lng: location.longitude,
+        id: location.id,
+        image_url: helpers.url_for(location.final_pics.last.photo)
       }
+      # if the location doen't has phot add crropi logo
     end
   end
 
