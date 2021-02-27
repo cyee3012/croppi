@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :final_pics, only: [:show, :edit, :update]
-
   resources :locations, only: [:show, :index] do
     resources :benchmark_pics do
       resources :final_pics, only: [:new, :create]
