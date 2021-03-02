@@ -19,6 +19,6 @@ retake the final pic here
   <video autoplay="" muted="" playsinline="" class="selfie-video">
           Video stream not available.
   </video>
-  <%= cl_image_tag @benchmark_pic.photo.key, class: 'benchmark_pic' %>
+  <%= cl_image_tag @benchmark_pic.photo.key, :quality=>"auto", class: 'benchmark_pic' %>
   <p class="selfie-startbutton">📸</p>
 </div>
