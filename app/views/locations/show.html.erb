@@ -19,7 +19,7 @@
       <% end %>
     <% end %>
   </div>
-
+  
   <div class="icons-row">
     <div class="icons">
       <%= link_to image_tag("https://res.cloudinary.com/dlzehsqej/image/upload/v1614851879/map_yhtlqb.png"), locations_path %>
@@ -28,7 +28,7 @@
       <%= link_to image_tag("https://res.cloudinary.com/cyee3012/image/upload/v1614408344/camera_mlxbk0.png"), new_location_benchmark_pic_path(@location) %>
     </div>
     <div class="icons">
-        Direction
+        <%= link_to "Direction", "http://www.google.com/maps/place/#{@location.latitude},#{@location.longitude}" %>
     </div>
   </div>
 </div>
