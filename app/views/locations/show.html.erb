@@ -1,43 +1,35 @@
-<div> photo from the map </div>
+<%= render 'shared/navbar' %>
 
-<div> photos that people took </div>
+<div class="location-show-container">
 
+  <div class="address">
+    <%= @location.address %>, <%= @location.longitude %>
+  </div>
 
-<div class= "card">
-<% cl_image_tag @location.final_pics.first.photo.key %>
-</div>
+  <div class="photo-banner">
+  <%= cl_image_tag @location.final_pics.first.photo.key, :quality=>"auto", :gravity=>"auto", :crop=>"fill" %>
+  </div>
 
-
-
-
-<div class="cards">
-
-  <% @location.final_pics.each do |final_pic| %>
-    <% if final_pic.photo.attached? %>
-      <div class="card"> <%= cl_image_tag final_pic.photo.key %> </div>
-    <% else %>
-      <%= image_tag 'beach.jpg' %>
+  <div class="photo-cards">
+    <% @location.final_pics.each do |final_pic| %>
+      <% if final_pic.photo.attached? %>
+        <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path final_pic.photo.key, :quality=>"auto" %>')"></div>
+      <% else %>
+        <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_tag 'beach.jpg', :quality=>"auto" %>')"></div>
+      <% end %>
     <% end %>
-  <% end %>
-
-</div>
-
-
-
-
-<div> navigation bar </div>
-
-
-<div class="cards">
-  <div class="card-category" style="">
-    <%= link_to "Map", locations_path %>
   </div>
 
-  <div class="card-category" style="">
-    <%= link_to "Camera", new_location_benchmark_pic_path(@location) %>
-  </div>
-
-  <div class="card-category" style="">
-    Direction
+  <div class="icons-row">
+    <div class="icons">
+      <%= link_to image_tag("https://res.cloudinary.com/dlzehsqej/image/upload/v1614851879/map_yhtlqb.png"), locations_path %>
+    </div>
+    <div class="icons">
+      <%= link_to image_tag("https://res.cloudinary.com/cyee3012/image/upload/v1614408344/camera_mlxbk0.png"), new_location_benchmark_pic_path(@location) %>
+    </div>
+    <div class="icons">
+        Direction
+    </div>
   </div>
 </div>
+
