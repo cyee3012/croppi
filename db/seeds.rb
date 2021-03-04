@@ -88,6 +88,26 @@ final_pic = FinalPic.create!(
   benchmark_pic: BenchmarkPic.where(user: user).first
   )
 
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614861429/hub2_topzpq.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614861429/hub3_idiowv.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
 photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614404740/Image_from_iOS_2_og9f6c.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
@@ -104,3 +124,81 @@ final_pic.save
 
 
 
+
+puts "Creating demo address_Gandamu"
+gandamu = Location.create!(
+  latitude: 35.6249939,
+  longitude: 139.7736169
+)
+
+final_pic = FinalPic.create!(
+  location: gandamu,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614858541/gamdum_kuvrkt.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: gandamu,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614858606/gambum2_h4bqlt.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+puts "Creating demo address_Shibuya"
+shibuya = Location.create!(
+  latitude: 35.6588053,
+  longitude: 139.7022041
+)
+
+final_pic = FinalPic.create!(
+  location: shibuya,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614858930/shibuya_mxzvoi.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: shibuya,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614858930/shibuya2_wr5lw1.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+puts "Creating demo address_Shinagawa"
+shinagawa = Location.create!(
+  latitude: 35.588476,
+  longitude: 139.7353067
+)
+
+final_pic = FinalPic.create!(
+  location: shinagawa,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614859337/shinagawa1_s9omff.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: shinagawa,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614859332/shinagawa3_vjzlhb.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
