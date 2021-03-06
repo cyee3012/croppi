@@ -7,8 +7,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1px;
-  height: 100%;
-  margin-left: 4px;
+  padding-left: 4px;
 }
 
 .card {
@@ -24,4 +23,8 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 1px;
+}
+
+body {
+  background-color: #FEF8EC;
 }

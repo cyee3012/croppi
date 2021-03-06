@@ -1,8 +1,8 @@
 .location-show-container {
   text-align: center;
-    background-color: #FEF8EC;
-    border-radius: 2px;
-    box-shadow: 0px 0px 5px #E3E3DE;
+  background-color: #FEF8EC;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px #E3E3DE;
 }
 
 .address {
@@ -26,7 +26,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1px;
-  height: 100%;
   margin-left: 4px;
 }
 
