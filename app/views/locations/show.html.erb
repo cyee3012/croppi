@@ -15,7 +15,7 @@
       <% if final_pic.photo.attached? %>
         <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path final_pic.photo.key, :quality=>"auto" %>')"></div>
       <% else %>
-        <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_tag 'beach.jpg', :quality=>"auto" %>')"></div>
+        <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dlzehsqej/image/upload/v1614934364/Screenshot_2021-03-05_at_17.48.27_l9asdj.png')"></div>
       <% end %>
     <% end %>
   </div>
