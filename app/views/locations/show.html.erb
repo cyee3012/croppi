@@ -3,7 +3,7 @@
 <div class="location-show-container">
 
   <div class="address">
-    <%= @location.address %>, <%= @location.longitude %>
+    <%= @location.address %>
   </div>
 
   <div class="photo-banner">
@@ -19,7 +19,7 @@
       <% end %>
     <% end %>
   </div>
-  
+
   <div class="icons-row">
     <div class="icons">
       <%= link_to image_tag("https://res.cloudinary.com/dlzehsqej/image/upload/v1614851879/map_yhtlqb.png"), locations_path %>

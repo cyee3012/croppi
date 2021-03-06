@@ -69,7 +69,8 @@ final_pic.save
 puts "Creating demo address_Le wagon"
 lewagon = Location.create!(
   latitude: 35.6340257,
-  longitude: 139.7091676
+  longitude: 139.7091676,
+  address: "Impact HUB Tokyo, Meguro"
 )
 
 final_pic = FinalPic.create!(
@@ -128,7 +129,8 @@ final_pic.save
 puts "Creating demo address_Gandamu"
 gandamu = Location.create!(
   latitude: 35.6249939,
-  longitude: 139.7736169
+  longitude: 139.7736169,
+  address: "The Life-Sized Unicorn Gundam Statue, Odaiba"
 )
 
 final_pic = FinalPic.create!(
@@ -154,7 +156,8 @@ final_pic.save
 puts "Creating demo address_Shibuya"
 shibuya = Location.create!(
   latitude: 35.6588053,
-  longitude: 139.7022041
+  longitude: 139.7022041,
+  address: "SHIBUYA SKY, Shibuya"
 )
 
 final_pic = FinalPic.create!(
@@ -180,7 +183,8 @@ final_pic.save
 puts "Creating demo address_Shinagawa"
 shinagawa = Location.create!(
   latitude: 35.588476,
-  longitude: 139.7353067
+  longitude: 139.7353067,
+  address: "Shinagawa Aquarium, Shinagawa"
 )
 
 final_pic = FinalPic.create!(
