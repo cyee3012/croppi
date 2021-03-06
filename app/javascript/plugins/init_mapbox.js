@@ -27,7 +27,7 @@ const initMapbox = () => {
       // Pass the element as an argument to the new marker
       new mapboxgl.Marker(element)
         .setLngLat([marker.lng, marker.lat])
-        .setPopup(popup)
+        //.setPopup(popup)
         .addTo(map);
     });
     const fitMapToMarkers = (map, markers) => {
