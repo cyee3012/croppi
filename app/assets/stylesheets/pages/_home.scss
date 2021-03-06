@@ -2,3 +2,26 @@
 .banner-container {
   justify-content: center;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  height: 100%;
+  margin-left: 4px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 1px;
+}
