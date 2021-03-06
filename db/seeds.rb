@@ -62,7 +62,7 @@ final_pic = FinalPic.create!(
   benchmark_pic: BenchmarkPic.where(user: user).first
   )
 
-photo = open("https://wallpapercave.com/wp/wp4312137.jpg")
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614996537/tokyo2_tgb1ug.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
 
