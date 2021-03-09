@@ -26,6 +26,7 @@ import "bootstrap";
 import { initSelfie } from './components/final_pic';
 import { previewBenchmark } from './components/benchmark_pic';
 import { initMapbox } from '../plugins/init_mapbox';
+import { popoutPicture} from './components/popout_picture';
 
 
 // Internal imports, e.g:
@@ -35,15 +36,24 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // previewBenchmark();
-if (document.querySelector('.benchmark_pic_photo')) {
+  if (document.querySelector('.benchmark_pic_photo')) {
     previewBenchmark();
-  };
+  }
   if (document.querySelector('.selfie-video')) {
     initSelfie();
   }
-});
-
-
-document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  popoutPicture();
 });
+
+
+
+
+
+
+
+
+
+
+
+
