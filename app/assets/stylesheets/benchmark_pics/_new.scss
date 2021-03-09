@@ -1,5 +1,8 @@
 .benchmark-container {
   justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items : center;
 
   .simple_form {
     text-align: center;
