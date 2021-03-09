@@ -3,17 +3,12 @@
     <%= cl_image_tag @final_pic.photo.key %>
     <button type="button" class="btn btn-primary"><%= link_to "retake?", edit_final_pic_path(@final_pic) %></button>
     <div class='pad'>
-<!--       <%= social_share_button_tag('share') %>
- -->
+      <%= social_share_button_tag('share') %>
+      <br>
     </div>
-    <div class="icon-row">
-      <button class="facebook-share-button" data="facebook"></button>
-      <button class="twitter-share-button" data="twitter"></button>
-      <button class="instagram-share-button" data="instagram"></button>
-      <button class="tumblr-share-button" data="tumblr"></button>
-      <button class="line-share-button" data="line"></button>
+    <!-- <div class="icon-row">
 
-    </div>
+    </div> -->
     <div class="home_link">
       <%= link_to "home", root_path %>
     </div>
@@ -22,4 +17,9 @@
 
 </div>
 
+      <!-- <div class="facebook-share-button" data="facebook"></div>
+      <div class="twitter-share-button" data="twitter"></div>
+      <div class="instagram-share-button" data="instagram"></div>
+      <div class="tumblr-share-button" data="tumblr"></div>
+      <div class="line-share-button" data="line"></div> -->
 
