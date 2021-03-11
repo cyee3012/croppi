@@ -119,12 +119,49 @@ final_pic = FinalPic.create!(
   benchmark_pic: BenchmarkPic.where(user: user).first
   )
 
-photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614404740/Image_from_iOS_vgrbi2.jpg")
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1615459442/IMG_2811_zbp0f4.jpg")
 final_pic.photo.attach(io: photo, filename: "photo.jpg")
 final_pic.save
 
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
 
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1615459442/IMG_2810_diguc8.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
 
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1615459442/IMG_2814_mtxq3r.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1615459696/IMG_2813_gkwkco.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
+
+final_pic = FinalPic.create!(
+  location: lewagon,
+  user: user,
+  benchmark_pic: BenchmarkPic.where(user: user).first
+  )
+
+photo = open("https://res.cloudinary.com/dlzehsqej/image/upload/v1614404740/Image_from_iOS_vgrbi2.jpg")
+final_pic.photo.attach(io: photo, filename: "photo.jpg")
+final_pic.save
 
 puts "Creating demo address_Gandamu"
 gandamu = Location.create!(
