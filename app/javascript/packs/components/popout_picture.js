@@ -18,7 +18,7 @@ const popoutPicture = () => {
     const elem = e.target;
     modal.style.display = "block";
     modalImg.src = elem.dataset.biggerSrc || elem.src;
-    captionText.innerHTML = elem.alt;
+    //captionText.innerHTML = elem.alt;
   })
   })
 
