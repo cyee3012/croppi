@@ -22,7 +22,7 @@ const initSelfie = () => {
       // formData.append('selfie[title]', `Picture taken on ${(new Date).toString()}`);
       // Change the 📸 button to ✅ and freeze the video
       // when the selfie is taken
-      startbutton.innerText = "✅";
+      startbutton.innerHTML = "<img src=\"https://res.cloudinary.com/cyee3012/image/upload/v1615462684/croppi-tick_skij9f.svg\" alt=\"shutter\">";
       video.pause();
       // Send the selfie to Rails backend to store it
       if (window.location.pathname.includes("/new")) {
