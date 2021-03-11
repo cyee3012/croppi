@@ -13,12 +13,23 @@
   <div class="photo-cards">
     <% @location.final_pics.each do |final_pic| %>
       <% if final_pic.photo.attached? %>
-        <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path final_pic.photo.key, :quality=>"auto" %>')"></div>
+        <div id ="myImg" class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path final_pic.photo.key, :quality=>"auto" %>')" data-bigger-src="<%= cl_image_path final_pic.photo.key, :quality=>"auto" %>"> </div>
       <% else %>
-        <div class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dlzehsqej/image/upload/v1614934364/Screenshot_2021-03-05_at_17.48.27_l9asdj.png')"></div>
+        <div id ="myImg" class="photo-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dlzehsqej/image/upload/v1614934364/Screenshot_2021-03-05_at_17.48.27_l9asdj.png')"></div>
       <% end %>
     <% end %>
   </div>
+
+  <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img id="modal-img" class="modal-content"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS2ol73JZj6-IqypxPZXYS3rRiPwKteoD8vezk9QsRdkjt3jEn&usqp=CAU">
+
+
+
+
+
+  <div id="caption"></div>
+</div>
 
   <div class="icons-row">
     <div class="icons">

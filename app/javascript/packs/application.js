@@ -26,8 +26,8 @@ import "bootstrap";
 import { initSelfie } from './components/final_pic';
 import { previewBenchmark } from './components/benchmark_pic';
 import { initMapbox } from '../plugins/init_mapbox';
+import { popoutPicture} from './components/popout_picture';
 import { touchCercle } from './touch_cercle';
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 // require('packs/social-share-button.js.erb')
@@ -38,13 +38,22 @@ document.addEventListener('turbolinks:load', () => {
   touchCercle();
 if (document.querySelector('.benchmark_pic_photo')) {
     previewBenchmark();
-  };
+  }
   if (document.querySelector('.selfie-video')) {
     initSelfie();
   }
-});
-
-
-document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  popoutPicture();
 });
+
+
+
+
+
+
+
+
+
+
+
+
