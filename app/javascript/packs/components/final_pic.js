@@ -4,7 +4,7 @@ const initSelfie = () => {
   const video = document.querySelector('.selfie-video');
   const startbutton = document.querySelector('.selfie-startbutton');
   const canvas = document.createElement('canvas');
-  let width = 375;    // We will scale the photo width to this
+  let width = 960;    // We will scale the photo width to this
   let height = 812;
   let streaming = false;
 
@@ -42,7 +42,7 @@ const initSelfie = () => {
     }
 
 
-  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false })
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment", height: 960, width: 1280 }, audio: false })
     .then(function(stream) {
         video.srcObject = stream;
         video.play();
