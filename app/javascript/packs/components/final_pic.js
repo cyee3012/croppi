@@ -42,7 +42,7 @@ const initSelfie = () => {
     }
 
 
-  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false })
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment", height: 960, width: 1280 }, audio: false })
     .then(function(stream) {
         video.srcObject = stream;
         video.play();
