@@ -1,1 +1,11 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+To get the app running, first run:
+
+bundle install
+yarn install
+
+To start the server:
+
+rails s
+
+View it in your browser via localhost:3000
+To kill the server, press Control+Z
